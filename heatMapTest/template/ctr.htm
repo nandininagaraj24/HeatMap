@@ -1,0 +1,34 @@
+<!--{% repeat resources.js %}-->
+<script type="text/javascript" src="{{content}}"></script>
+<!--{% endrepeat %}-->
+
+<!--{% repeat resources.css %}-->
+<link rel="stylesheet" type="text/css" href="{{val}}" />
+<!--{% endrepeat %}-->
+
+    <table class="testTable" style="width:100%">
+        <tr>
+            <td class="isNumber" title="0">0</td>
+            <td class="isNumber" title="-2">-2</td>
+            <td class="isNumber" title="9">9</td>
+        </tr>
+       
+        <tr>
+            <td class="isNumber" title="10">10</td>
+            <td class="isNumber" title="7">7</td>
+            <td class="isNumber" title="8">8</td>
+        </tr>
+    </table>
+    <button>Click me</button>
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $('.testTable').dsHeatGrid({
+            type: "MonoChromatic", // RedToGreen or MonoChromatic 
+            colors: [""], // accept colors in rgb format (if RedToGreen, the use ones which you are using now, else whatever is passed) 
+           // divSelector: "testTable",
+            cellSelector: "isNumber",
+            attributeSelector: "title",
+            minValue: 0.20
+        });
+    });
+</script>

@@ -1,0 +1,22 @@
+{
+  "name": "sample-app",
+  "version": "0.0.1",
+  "description": "Sample DS Hello App",
+  "author": "abc",
+  "dependencies": {
+    "ds-ui-block": "*",
+    "ds-widget-grid": "*"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "*",
+    "load-grunt-tasks": "*",
+    "grunt-concat-css": "*"
+  },
+  "bin": {
+    "index": "index.js"
+  },
+  "manifest": "manifest.js",
+  "auth": {
+      "tech": "guest"
+  }
+}
